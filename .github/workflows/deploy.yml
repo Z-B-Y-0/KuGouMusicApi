@@ -31,11 +31,14 @@ jobs:
       - name: Install step
         run: "npm install"
 
+      - name: Build step
+        run: "npm run dev"
+
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "z-b-y-0-kugoumusica-45"
-          entrypoint: "npm run dev"
+          entrypoint: ""
           root: ""
           
           
